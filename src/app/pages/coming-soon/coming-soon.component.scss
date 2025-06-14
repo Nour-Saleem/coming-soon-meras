@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #ffffff;
+  }
+  
+  [data-theme='dark'] {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+  }
+  
+  [data-theme='light'] {
+    --primary-color: #1E1E1E;
+    --secondary-color: #ffffff;
+  }
+  
+  :host {
+    font-family: 'CustomFont', sans-serif;
+  }

@@ -1,0 +1,44 @@
+.sidebar{
+    background-color: #013865;
+    width: 50%;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    @media(max-width:767px){
+        width: 100%;
+        right: 0;
+        top: 4rem;
+    }
+    img{
+        width: 15rem;
+        align-self: flex-end;
+    }
+    p{
+        
+       line-height: 70px;
+       letter-spacing: 1px;
+       text-align: right;
+
+    }
+    .example-images{
+        flex-wrap: wrap;
+        @media(max-width:767px){
+            margin: auto;
+        }
+        img{
+            width: 10rem;
+            @media(max-width:767px){
+                width: 15rem;
+            }
+        }
+    }
+    span{
+        text-align: right;
+        line-height: 100%;
+    }
+    .social{
+        img{
+            width: 3rem;
+        }
+    }
+}

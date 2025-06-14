@@ -1,0 +1,68 @@
+{
+  "header": {
+    "logo_alt": "شعار إيرلي بيردز",
+    "title": "إيرلي بيردز",
+    "lang_en": "الإنجليزية",
+    "lang_ar": "العربية",
+    "contact_us": "تواصل معنا"
+  },
+  "main": {
+    "coming_soon": "نحو مستقبل عقاري مشرق",
+    "description": "كن أول من يعرف وقت الإطلاق!",
+    "days": " ",
+    "hours": " ",
+    "minutes": " ",
+    "seconds": " ",
+    "email_placeholder": "أدخل بريدك الإلكتروني",
+    "notify": "أشترك",
+    "social": "تواصل معنا",
+    "speech": "مرحبًا بك في إيرلي بيردز، اكتشف أفضل أدوات التسويق العقاري!"
+  },
+  "modal": {
+    "title": "اتصل بنا",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف المحمول",
+    "company": "اسم الشركة",
+    "job_title": "المسمى الوظيفي",
+    "inquiry": "الاستفسارات",
+    "inquiry_placeholder": "اختر استفسار",
+    "inquiry_vr": "الواقع الافتراضي - VR",
+    "inquiry_maktro": "ماكت برو",
+    "inquiry_real_estate": "إدارة علاقات العملاء - العقارات",    "other": "أخرى",
+    "message": "الرسالة",
+    "submit": "إرسال",
+    "Close": "إغلاق"
+,
+    "errors": {
+      "name_required": "الاسم مطلوب.",
+      "email_valid": "أدخل بريدًا إلكترونيًا صالحًا.",
+      "phone_required": "رقم الهاتف المحمول مطلوب.",
+      "company_required": "اسم الشركة مطلوب.",
+      "job_title_Inquiry": " الاستفسار مطلوب",
+      "job_title_required": "المسمى الوظيفي مطلوب.",
+      "message_required": "الرسالة مطلوبة."
+    }
+  }
+  , 
+"alert": {
+    "success": "تم بنجاح!",
+    "messageSent": "تم إرسال رسالتك بنجاح."
+  },
+  
+    "dropdown": {
+      "select_placeholder": "اختر",
+      "company_options": {
+        "real_estate_development": "تطوير العقارات",
+        "projects_management": "إدارة المشاريع",
+        "real_estate_investment": "الاستثمار العقاري"
+      },
+      "individual_options": {
+        "villa": "فيلا",
+        "apartments": "شقق",
+        "lands": "أراضي"
+      }
+    }
+  
+  
+}

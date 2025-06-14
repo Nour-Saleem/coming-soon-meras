@@ -1,0 +1,153 @@
+<div class="w-[full] h-screen overflow-auto bg-lightBg dark:bg-darkBg text-textDark dark:text-textLight flex flex-col">
+    <!-- Background Image with Overlay -->
+    <div *ngFor="let img of images; let i = index" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+    [ngStyle]="{'background-image': 'url(' + img + ')'}" [class.opacity-0]="currentSlide !== i" [class.opacity-100]="currentSlide === i"></div>
+<div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  
+    <!-- Header -->
+    <header class="w-full z-10 bg-[rgba(1,68,123,0.0784313725)]">
+      <section class="w-[80vw] mx-auto  p-4 flex justify-between items-center">
+  
+        <div class="flex items-center ">
+          <button type="button" class="text-white text-2xl size-9 inline-flex items-center gap-x-2 font-medium rounded-lg border border-transparent disabled:opacity-50 disabled:pointer-events-none bg-transparent" (click)="toggle()"  >
+            ☰  
+          </button>
+          
+          <!-- <button type="button" class="text-white text-2xl size-9 inline-flex items-center gap-x-2   font-medium rounded-lg border border-transparent disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-offcanvas-right" data-hs-overlay="#hs-offcanvas-right">
+            ☰  
+          </button> -->
+          <!-- <button class="text-white text-2xl size-9" (click)="toggleTheme()">☰</button> -->
+        <button type="button" class="bg-transparent hs-dark-mode-active:hidden block hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-theme-click-value="dark">
+          <span class="group inline-flex shrink-0 justify-center items-center size-9">
+            <svg class="shrink-0 size-6" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </span>
+        </button>
+        <button type="button" class="bg-transparent hs-dark-mode-active:block hidden hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-theme-click-value="light">
+          <span class="group inline-flex shrink-0 justify-center items-center size-9">
+            <svg class="shrink-0 size-6" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </span>
+        </button>  
+      </div>
+      <img src="../../../assets/images/logoaura.png" alt="AUORA ABHOR" class="h-12" />
+    </section>
+     </header>
+     <div *ngIf="isVisible" class="sidebar  flex flex-col backdrop-blur-2xl border border-black  py-8 px-16  gap-[2rem] z-[1000] " #elementRef>
+      <img src="../../../assets/images/logoaura.png" alt="AUORA ABHOR" />
+      <p class="text-white font-normal text-[25px] font-['Almarai'] ">أورا ابحر فيلا حيث تلتقي رفاهية العيش مع روح الأناقة في تصاميم فريدة اقتبست من اسمها روح الفخامة وروعة الإتقان بطراز يحاكي القصـور بمنظـور عصـري وحـديث 
+      </p>
+      <div class="example-images w-[100%] flex mt-2  gap-[1rem] ">
+        <img src="../../../assets/images/sidebar_list/Img.png" class="rounded-[4px]" alt="">
+        <img src="../../../assets/images/sidebar_list/Img (1).png" class="rounded-[4px]" alt="">
+        <img src="../../../assets/images/sidebar_list/Img (2).png" class="rounded-[4px]" alt="">
+        <img src="../../../assets/images/sidebar_list/Img (3).png" class="rounded-[4px]" alt="">
+        <img src="../../../assets/images/sidebar_list/Img (4).png" class="rounded-[4px]" alt="">
+        <img src="../../../assets/images/sidebar_list/Img (5).png" class="rounded-[4px]" alt="">
+      </div>
+      <span class="text-white font-bold text-[24px] mt-4 font-['Almarai']">المطور العقاري</span>
+      <img src="../../../assets/images/Horizontal White 1.png" alt="">
+      <p class="text-white font-normal text-[25px] font-['Almarai']">نحن في ذهب كابيتال العقارية لا نبني فقـط بل نصنـع بيئـة سكنيـة تحـاكـي أسـلوب حيـاة العائلة في تصميمها من خلال فريق هندسي خبير يهتم بأدق التفاصيل في تسخير المساحات وتصميم أنيق ومريح يلائـم جميـع الأذواق</p> 
+      <div class=" flex flex-col items-end gap-6 md:w-auto w-full mt-2">
+        <div class="text-white text-[25px] font-normal font-['Almarai']">خدمة المبيعات</div>
+           <div class="flex items-center space-x-2 text-white text-xl font-normal font-['Almarai']">
+            
+            
+            <a href="https://wa.me/+966530660273" class="bg-white p-2 rounded-full" target="_blank">
+    <img src="../../../assets/images/icons8-whatsapp.svg" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+<span>+966 530 660 273</span>
+          </div>
+        <div class="w-full border-b border-white"></div>
+    
+        <!-- Icons Container -->
+        <div class="flex items-center justify-end gap-4 flex-wrap">
+          <div class="social bg-red-50 rounded-full flex items-center justify-center">
+              <img _ngcontent-ng-c1946291930="" src="../../../assets/images/Facebook-Icon.svg" class=" ">
+          </div>
+    
+          <div class="social bg-red-50 rounded-full flex items-center justify-center">
+              <img _ngcontent-ng-c1946291930="" src="../../../assets/images/Twitter-Icon.svg" class=" ">
+          </div>
+    
+          <div class="social bg-red-50 rounded-full flex items-center justify-center">
+              <img _ngcontent-ng-c1946291930="" src="../../../assets/images/Youtube-Icon.svg" class=" ">
+          </div>
+    
+          <div class="social bg-red-50 rounded-full flex items-center justify-center">
+              <img _ngcontent-ng-c1946291930="" src="../../../assets/images/LinkedIn-Icon.svg" class=" ">
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  
+    <!-- Content Section -->
+    <div class=" w-[80vw] m-auto flex-grow flex justify-end items-center text-right z-10">
+      <div>
+        <h1 class="text-white my-[40px]   font-bold font-['Almarai'] leading-[82px] text-3xl sm:text-5xl">حيث يلتقي البحر بجمال التصميم</h1>
+        <p class="text-white  h-20 text-4xl mb-6 hidden sm:block">مشروع يجمع بين الفخامة والراحة</p>
+         <button class="  w-48 h-16 bg-white bg-opacity-5 border border-white backdrop-blur-[5px] rounded-none">
+          <div class="flex gap-4 justify-center align-middle">
+            <img src="../../../assets/images/vr.svg" alt="" srcset="">
+            <p class="text-white">VR تشغيل  </p>
+          </div>
+          </button>  
+        </div>
+    </div>
+  
+    <!-- Footer Section with Navigation and Progress Bar -->
+    <!-- <footer class="w-[80vw] m-auto p-4 flex items-center justify-center sm:justify-between text-white z-10">
+      <div class=" p-4 flex flex-col items-center justify-between text-white z-10">
+        <div class="w-44 flex justify-between items-center">
+          <div class="text-white text-sm font-normal font-['Almarai']">{{ currentSlide + 1 | number:'2.0' }}</div>
+          <div class="text-white text-sm font-normal font-['Almarai']">{{ images.length | number:'2.0' }}</div>
+        </div>
+        <div class=" w-44 mt-2 mx-4 h-1 bg-white bg-opacity-30">
+          <div [style.width.%]="progress" class="wh-full bg-white"></div>
+        </div>
+      </div>
+    
+      <div class="inline-flex justify-start items-center gap-4 mt-4">
+        <button  (click)="prevSlide()" class="w-12 h-12 bg-white bg-opacity-5 rounded-full border border-white border-opacity-10 backdrop-blur-[3px] flex items-center justify-center">
+          <img src="../../../assets/images/subway_down-2 (4).svg" alt="">
+        </button>
+        <button (click)="nextSlide()" class="w-12 h-12 bg-white bg-opacity-5 rounded-full border border-white border-opacity-10 backdrop-blur-[3px] flex items-center justify-center">
+          <img src="../../../assets/images/subway_down-2 (5).svg" alt="">
+        </button>
+      </div>
+    
+    </footer> -->
+  </div>
+  
+  
+  
+  <div id="hs-offcanvas-right" class="z-50 hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform h-full max-w-xs w-full z-80 bg-white border-s border-gray-200 dark:bg-neutral-800 dark:border-neutral-700" role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-right-label">
+    <div class="flex justify-between items-center py-3 px-4 border-b border-gray-200 dark:border-neutral-700">
+      <h3 id="hs-offcanvas-right-label" class="font-bold text-gray-800 dark:text-white">
+        Offcanvas title
+      </h3>
+      <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="Close" data-hs-overlay="#hs-offcanvas-right">
+        <span class="sr-only">Close</span>
+        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="p-4">
+      <p class="text-gray-800 dark:text-neutral-400">
+        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+      </p>
+    </div>
+  </div>

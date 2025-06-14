@@ -1,0 +1,61 @@
+.fixed {
+    position: fixed;
+  }
+  
+  .inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .z-50 {
+    z-index: 99999;
+  }
+  
+  .bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .bg-white {
+    background-color: white;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  label{
+    font-family: "Adelle Sans";
+    font-weight: 600;
+
+  }
+  .focus\:ring-2 {
+    outline: 2px solid #B2B2B2;
+  }
+  .button-active {
+    background-color: #d4af37;
+    color: white;
+  }
+  
+  button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  // button:hover {
+  //   background-color: #d4af37;
+  //   color: white;
+  // }
+  
+  @media (max-width: 576px) {
+    .parent{
+        width: 90%;
+        height: 100vh;
+        margin: 0% auto;
+        overflow: auto;
+    }
+  }
