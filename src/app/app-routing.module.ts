@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { CommingSoonComponent } from './components/comming-soon/comming-soon.component';
 
