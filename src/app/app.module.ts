@@ -12,6 +12,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { CommingSoonComponent } from './components/comming-soon/comming-soon.component';
 
 
 
@@ -27,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     ContactUsModalComponent,
     LandingPageComponent,
     HeroSectionComponent,
+    CommingSoonComponent,
   
   ],
   imports: [

@@ -6,6 +6,9 @@
 
 * {
   font-family: 'Almarai', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 p a h1 h2 h3 h4 h5 h6 div span {
   font-family: 'Almarai', sans-serif;
@@ -13,66 +16,40 @@ p a h1 h2 h3 h4 h5 h6 div span {
 }
 
 
-:root {
-  --primary-color: #F79C42; // Light mode primary color
-  --secondary-color: #333;  // Secondary color
-  --background-light: #F2F2F2;  // Light mode background
-  --background-dark: #1F1F1F;   // Dark mode background
-  --font-family-base: 'Inter', sans-serif;
-  --secondry-500: rgba(185, 86, 47, 1);
-  --secondry-200: rgba(234, 191, 174, 1);
-  --secondry-50: rgba(250, 239, 235, 1);
-  --primary-500: rgba(1, 68, 123, 1);
-}
-@layer utilities {
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+// :root {
+//   --primary-color: #F79C42; // Light mode primary color
+//   --secondary-color: #333;  // Secondary color
+//   --background-light: #F2F2F2;  // Light mode background
+//   --background-dark: #1F1F1F;   // Dark mode background
+//   --font-family-base: 'Inter', sans-serif;
+//   --secondry-500: rgba(185, 86, 47, 1);
+//   --secondry-200: rgba(234, 191, 174, 1);
+//   --secondry-50: rgba(250, 239, 235, 1);
+//   --primary-500: rgba(1, 68, 123, 1);
+// }
+// @layer utilities {
+//   @keyframes fadeInUp {
+//     from {
+//       opacity: 0;
+//       transform: translateY(20px);
+//     }
+//     to {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//   }
 
-  .animate-fadeInUp {
-    animation: fadeInUp 1s ease forwards;
-  }
-}
-// Dark Mode styles
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--background-dark);
-    color: #fff;
-    body {
-      font-family: 'Almarai', sans-serif;
-  }
-  
-  }
-  
-  .dark .text-primary {
-    color: var(--primary-color); // In dark mode, this will turn to light color
-  }
+//   .animate-fadeInUp {
+//     animation: fadeInUp 1s ease forwards;
+//   }
+// }
 
-  .dark .bg-primary {
-    background-color: var(--primary-color); // In dark mode, apply the primary color
-  }
-
-  .dark .bg-secondary {
-    background-color: var(--secondary-color);
-  }
-
-  // Add more dark mode specific styles here
-}
 
 // Additional base styles
 body {
   font-family: var(--font-family-base);
-  background-color: var(--background-light);
-  color: #333;
-  margin: 0;
-  padding: 0;
+  
+  box-sizing: border-box;
 }
 
 a {

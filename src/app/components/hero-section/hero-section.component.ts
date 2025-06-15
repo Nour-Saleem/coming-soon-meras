@@ -5,12 +5,9 @@ import { Component } from "@angular/core";
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss'],})
 export class HeroSectionComponent {
-   isVisible: boolean = false; // Initial state - div is hidden
-
+   
   // Method to toggle the visibility of the div
-  toggle() {
-    this.isVisible = !this.isVisible;
-  }
+ 
   ngOnInit() {
     const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
@@ -36,12 +33,8 @@ export class HeroSectionComponent {
 
 
   images = [
-    '../../../assets/images/hero.jpg',
-    '../../../assets/images/photo_2_2025-04-04_18-13-35.jpg',
-    '../../../assets/images/photo_1_2025-04-04_18-13-35.jpg',
-    '../../../assets/images/photo_3_2025-04-04_18-13-35.jpg',
-    '../../../assets/images/photo_4_2025-04-04_18-13-35.jpg',
-    '../../../assets/images/photo_5_2025-04-04_18-13-35.jpg',
+    '../../../assets/images/Group 3286.png',
+   
   ];
 
   currentSlide = 0;

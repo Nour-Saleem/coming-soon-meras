@@ -1,0 +1,166 @@
+.box{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    #bg_container{
+        height: 100%;
+        width: 100%;
+    }
+     header{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6rem;
+        @media(max-width:767px){
+            width: 100%;
+            padding: 0 1rem;
+            
+        }
+        
+    }
+    .logo_container{
+        width: 12rem;
+        height: 7rem;
+        @media(max-width:767px){
+            height: 10rem;
+        }
+        img{
+            width:100%;
+            height: 100%;
+        }
+    }
+    .content{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        left: 15%;
+        @media(max-width:767px){
+            width: 95%;
+            top: 15rem;
+            row-gap: 1rem;
+            left: 3%;
+        }
+       
+        #almost{
+            font-size: 65px;
+            font-weight: 400;
+            color: white;
+            text-align: center;
+            @media(max-width:767px){
+                font-size: 32px;}
+        }
+        #description{
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        color: #FFFFFFD9;
+        @media(max-width:767px){
+                font-size: 14px;}
+
+        }
+        
+        .timer{
+            display: flex;
+            margin: auto;
+            margin-top: 2rem;
+            column-gap: 3rem;
+            @media(max-width:767px){
+              margin-top: 6rem;
+            }
+            div{
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+                
+
+                div{
+                    border: 1px solid #FFFFFF;
+                    box-shadow: 0px 33px 71px 0px #1A269440;
+                    border-radius: 8px;
+                    width: 124px;
+                    height: 100px;
+                    color: white;
+                    font-size: 64px;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @media(max-width:767px){
+                        width: 64px;
+                        height: 64px;
+                        font-size: 22px;
+                    }
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    @media(max-width:767px){
+                        font-size: 16px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    footer{
+        .elipse_container{
+            position: absolute;
+            bottom: 0;
+            height: 180px;
+            width: 100%;
+            @media(max-width:767px){
+                height: 250px;
+            }
+            
+          
+            
+            img{
+               margin: auto;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .social_icons{
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
+            position: absolute;
+            bottom: 4rem;
+            margin: auto;
+            left: 42%;
+            @media(max-width:767px){
+                left: 18%;
+                column-gap: 3rem;
+            }
+        }
+        .copyright{
+            position: absolute;
+            left: 40%;
+            bottom: 1rem;
+            text-align: center;
+            @media(max-width:767px){
+                left: 18%;
+            }
+            span{
+                color: #FFFFFF66;
+                font-weight: 350;
+                font-size: 16px;
+                letter-spacing: 2%;
+                @media(max-width:767px){
+                    
+                }
+       
+            }
+        }
+    }
+     
+}
