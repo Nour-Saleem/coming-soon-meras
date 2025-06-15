@@ -11,6 +11,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { CommingSoonComponent } from './components/comming-soon/comming-soon.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -35,6 +37,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FormsModule,
     CommonModule,
     RouterModule,
+     MatButtonModule,
      TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -42,6 +45,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         deps: [HttpClient],
       },
     }),
+     BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

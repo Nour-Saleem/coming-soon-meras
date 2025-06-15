@@ -20,6 +20,18 @@
             padding: 0 1rem;
 
         }
+        .header__tools{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            button{
+                border: 1px solid #FFFFFF;
+                box-shadow: 0px 33px 71px 0px #1A269440;
+                border-radius: 8px;
+                padding: 0.5rem;
+                color: #FFFFFF;
+            }
+        }
 
     }
     .logo_container{

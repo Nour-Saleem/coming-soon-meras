@@ -1,67 +1,8 @@
 {
-  "header": {
-    "logo_alt": "Early Birds Logo",
-    "title": "Early Birds",
-    "lang_en": "En",
-    "lang_ar": "Ar",
-    "contact_us": "Contact Us"
-  },
-  "main": {
-    "coming_soon": "We are Coming soon",
-    "description": "Get notified when we launch",
-    "days": "d",
-    "hours": "h",
-    "minutes": "m",
-    "seconds": "Seconds",
-    "email_placeholder": "Enter your email",
-    "notify": "Subscribe",
-    "social": "Get Social",
-    "speech": "Welcome to Early Birds, discover the best tools for real estate marketing!"
-  },
-  "modal": {
-    "title": "Contact Us",
-    "name": "Name",
-    "email": "Email",
-    "phone": "Phone Number",
-    "company": "Company Name",
-    "job_title": "Job Title",
-    "inquiry": "Inquiry Type",
-    "inquiry_placeholder": "Select an inquiry",
-    "inquiry_vr": "Virtual Reality - VR",
-    "inquiry_maktro": "I Maket Pro",
-    "inquiry_real_estate": "Real Estate CRM",
-    "other": "Other",
-    "message": "Message",
-    "submit": "Submit",
-    "Close": "Close",
-    "individual": "individual",
-    "company": "individual",
-
-    "errors": {
-      "name_required": "Name is required.",
-      "email_valid": "Enter a valid email address.",
-      "phone_required": "Phone number is required.",
-      "company_required": "Company name is required.",
-      "job_title_required": "Job title is required.",
-      "job_title_Inquiry": "Inquiry is required.", 
-      "message_required": "Message is required."
-    }
-  },
-  "alert": {
-    "success": "Success!",
-    "messageSent": "Your message has been sent successfully."
-  },
-  "dropdown": {
-    "select_placeholder": "Select",
-    "company_options": {
-      "real_estate_development": "Real Estate Development",
-      "projects_management": "Projects Management",
-      "real_estate_investment": "Real Estate Investment"
-    },
-    "individual_options": {
-      "villa": "Villa",
-      "apartments": "Apartments",
-      "lands": "Lands"
-    }
-  }
+ "Days":"Days",
+ "Hours":"Hours",
+ "Minutes":"Minutes",
+ "Seconds":"Seconds",
+ "description":"Global Communications is a company specialised in developing marketing strategies and managing commercial and real estate projects through advanced expertise.",
+ "soon":"WE ARE LAUNCHING SOON"
 }

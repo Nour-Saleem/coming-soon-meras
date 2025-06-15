@@ -6,9 +6,12 @@
     <header>
 
 
-        <div class="">
+        <div class="header__tools">
 
             <img src="../../../assets/images/Icon.svg" alt="">
+             <div class="">
+  <button (click)="changeLang(langCode)">{{unCurrentlang}}</button>
+</div>
 
         </div>
         <div class="logo_container">
@@ -18,24 +21,24 @@
 
     </header>
     <div class="content">
-        <span id="almost">قريبــــــــــــــــــاً</span>
-        <span id="description">مراس العالمية شركة متخصصة في تطوير استراتيجيات التسويق وإدارة المشاريع التجارية والعقارية من خلال خبرات متقدمة</span>
+        <span id="almost">{{'soon' | translate}}</span>
+        <span id="description">{{'description' | translate}}</span>
       <div class="timer">
   <div>
     <div>{{ days }}</div>
-    <span>Days</span>
+    <span>{{'Days' | translate}}</span>
   </div>
   <div>
     <div>{{ hours }}</div>
-    <span>Hours</span>
+    <span>{{'Hours' | translate}}</span>
   </div>
   <div>
     <div>{{ minutes }}</div>
-    <span>Minutes</span>
+    <span>{{'Minutes' | translate}}</span>
   </div>
   <div>
     <div>{{ seconds }}</div>
-    <span>Seconds</span>
+    <span>{{'Seconds' | translate}}</span>
   </div>
 </div>
 
@@ -55,4 +58,5 @@
             <span>Meras Global - © 2025 All Rights Reserved.</span>
         </div>
     </footer>
+    
 </div>
