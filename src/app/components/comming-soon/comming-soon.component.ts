@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { LayoutService } from 'src/app/services/layout.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-comming-soon',
@@ -18,9 +19,11 @@ targetDate = new Date(Date.now() + 11 * 24 * 60 * 60 * 1000);
   unCurrentlang!: string;
   currentlang!: string;
   langCode!: string;
-  constructor(public layoutService:LayoutService,@Inject(DOCUMENT) private document: Document,){
-
-  }
+  constructor(
+    public layoutService: LayoutService,
+    @Inject(DOCUMENT) private document: Document,
+    private translate: TranslateService
+  ) {}
   ngOnInit() {
     this.updateTimer();
     this.intervalId = setInterval(() => this.updateTimer(), 1000);
@@ -30,43 +33,38 @@ targetDate = new Date(Date.now() + 11 * 24 * 60 * 60 * 1000);
   ngOnDestroy() {
     clearInterval(this.intervalId);
   }
-   changeLang(lang: string) {
-
-    if (lang == 'ar') {
-      this.currentlang = "English"
-      this.layoutService.config =
-      {
-        dir: 'ltr',
-        lang: 'en'
-      }
-
+   changeLang() {
+    const currentLang = localStorage.getItem('lang');
+    let langToUse = 'ar';
+    let dir = 'rtl';
+    let currentlang = 'Arabic';
+    let unCurrentlang = 'English';
+    if (currentLang === 'ar') {
+      langToUse = 'en';
+      dir = 'ltr';
+      currentlang = 'English';
+      unCurrentlang = 'عربي';
     }
-    else if (lang == 'en') {
-      this.currentlang = "عربي"
-      this.layoutService.config =
-      {
-        dir: 'rtl',
-        lang: 'ar'
-      }
-    }
-
-    localStorage.setItem('lang', this.layoutService.config.lang);
-    localStorage.setItem('dir', this.layoutService.config.dir);
-    this.document.documentElement.lang = this.layoutService.config.lang;
-
-    window.location.reload();
+    this.layoutService.config = { dir, lang: langToUse };
+    localStorage.setItem('lang', langToUse);
+    localStorage.setItem('dir', dir);
+    this.document.documentElement.lang = langToUse;
+    this.document.documentElement.dir = dir;
+    this.translate.use(langToUse);
+    this.currentlang = currentlang;
+    this.unCurrentlang = unCurrentlang;
+    this.langCode = langToUse === 'ar' ? 'en' : 'ar';
   }
   checkCurrentLang() {
     const lang = localStorage.getItem('lang');
-
     if (lang === 'en') {
       this.currentlang = "English";
       this.unCurrentlang = "عربي";
-      this.langCode = "en"
-    } else if (lang === 'ar') {
+      this.langCode = "ar";
+    } else {
       this.currentlang = "Arabic";
       this.unCurrentlang = "English";
-      this.langCode = "ar"
+      this.langCode = "en";
     }
   }
 

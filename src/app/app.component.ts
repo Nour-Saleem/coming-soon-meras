@@ -12,7 +12,14 @@ export class AppComponent {
 
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['en', 'ar']);
-    this.translate.setDefaultLang('en');
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang && (savedLang === 'en' || savedLang === 'ar')) {
+      this.translate.setDefaultLang(savedLang);
+      this.translate.use(savedLang);
+    } else {
+      this.translate.setDefaultLang('en');
+      this.translate.use('en');
+    }
   }
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
@@ -21,9 +28,9 @@ export class AppComponent {
 
   switchLanguage(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
-    const selectedValue = selectElement.value; 
-    this.translate.use(selectedValue);  
+    const selectedValue = selectElement.value;
+    this.translate.use(selectedValue);
   }
-  
-  
+
+
 }
