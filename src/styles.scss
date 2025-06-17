@@ -50,6 +50,9 @@ body {
   font-family: var(--font-family-base);
   
   box-sizing: border-box;
+  &:lang(ar) {
+    text-align: right;
+  }
 }
 
 a {
